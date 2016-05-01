@@ -1,0 +1,46 @@
+Plain inline math:
+.
+$x$
+.
+<p><script type='math/tex'>x</script></p>
+.
+
+Multiple inline math:
+.
+$x$x$x$
+.
+<p><script type='math/tex'>x</script>x<script type='math/tex'>x</script></p>
+.
+
+Block-level parsing:
+.
+$$
+x
+$$
+.
+<script type='math/tex; mode=display'>
+x
+</script>
+.
+
+Inline math in table with | doesn't break table formatting:
+.
+a | b
+--|--
+$x|x$ | $b$
+.
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><script type='math/tex'>x|x</script></td>
+<td><script type='math/tex'>b</script></td>
+</tr>
+</tbody>
+</table>
+.
